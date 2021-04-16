@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CahBackend", "CahBackend\CahBackend.csproj", "{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{BE539B54-39FA-48C4-B68E-20167680FDCF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic", "GameLogic\GameLogic.csproj", "{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic.Tests", "GameLogic.Tests\GameLogic.Tests.csproj", "{6FC052F9-94D2-43D6-91E0-BDABDF7E1824}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9CB0DFB7-35C5-4A56-9D4F-0CDFF728EB2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CahBackend.Controllers.Session.Tests", "CahBackend.Controllers.Session.Tests\CahBackend.Controllers.Session.Tests.csproj", "{1A0E704E-6744-4697-9AFE-06BC737C7AE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC052F9-94D2-43D6-91E0-BDABDF7E1824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC052F9-94D2-43D6-91E0-BDABDF7E1824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC052F9-94D2-43D6-91E0-BDABDF7E1824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC052F9-94D2-43D6-91E0-BDABDF7E1824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0E704E-6744-4697-9AFE-06BC737C7AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0E704E-6744-4697-9AFE-06BC737C7AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0E704E-6744-4697-9AFE-06BC737C7AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0E704E-6744-4697-9AFE-06BC737C7AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742} = {BE539B54-39FA-48C4-B68E-20167680FDCF}
+		{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7} = {BE539B54-39FA-48C4-B68E-20167680FDCF}
+		{6FC052F9-94D2-43D6-91E0-BDABDF7E1824} = {9CB0DFB7-35C5-4A56-9D4F-0CDFF728EB2B}
+		{1A0E704E-6744-4697-9AFE-06BC737C7AE9} = {9CB0DFB7-35C5-4A56-9D4F-0CDFF728EB2B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5456445F-2479-4874-B9FA-865A3D39F5E9}
+	EndGlobalSection
+EndGlobal
