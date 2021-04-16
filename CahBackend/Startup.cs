@@ -28,13 +28,15 @@ namespace CahBackend
         {
             services.AddControllers();
             services.AddSignalR();
-            services.AddCors(options => options.AddPolicy("CorsPolicy", builder =>
+            services.AddCors(options =>
             {
-                builder .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .WithOrigins("http://localhost:4200")
-                        .AllowCredentials();
-            }));
+                options.AddPolicy("CorsPolicy", builder => builder
+                .WithOrigins("http://localhost:4200")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+            });
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
