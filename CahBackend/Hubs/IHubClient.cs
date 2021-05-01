@@ -1,5 +1,4 @@
-﻿using GameLogic.Models.Game;
-using Microsoft.AspNetCore.SignalR;
+﻿using GameLogic.Models.Lobby;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CahBackend.Hubs
 {
-    public class GameHub : Hub<IHubClient>
+    public interface IHubClient
     {
-
+        Task SendAsync(ChatMessage messageDto);
     }
 }

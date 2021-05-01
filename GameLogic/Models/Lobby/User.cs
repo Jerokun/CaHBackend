@@ -9,7 +9,7 @@ namespace GameLogic.Models.Lobby
 
         public User()
         {
-            Name = new Guid().ToString();
+            Id = new Guid();
         }
     }
 }

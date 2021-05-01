@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using GameLogic.Models.Lobby;
+using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 
 namespace CahBackend.Hubs
 {
-    public class ChatHub : Hub
+    public class ChatHub : Hub<IHubClient>
     {
-        public Task SendMessage1(string user, string message)
+        public async Task SendMessage(ChatMessage chatMessage)
         {
-            return Clients.All.SendAsync("ReceiveOne", user, message);
+            await Clients.All.SendAsync(chatMessage);
         }
     }
 }
