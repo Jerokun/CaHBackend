@@ -1,15 +1,20 @@
 namespace CahBackend
 {
     using CahBackend.Hubs;
+    using CahBackend.Repositories;
+    using GameLogic.DataConverter;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using Microsoft.OpenApi.Models;
+    using System.Text.Json;
 
     public class Startup
     {
+        internal readonly string CorsPolicy = "CorsPolicy";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -20,23 +25,30 @@ namespace CahBackend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CaH", Version = "v1" });
-            });
-            services.AddCors(options =>
 
-                options.AddPolicy("CorsPolicy", builder =>
+            services.AddCors(options =>
+            {
+                options.AddPolicy(CorsPolicy,
+                    builder =>
+                    {
+                        builder
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .WithOrigins("http://localhost:3000", "http://localhost:4200")
+                            .AllowCredentials();
+                    });
+            });
+
+            services.AddSingleton<PackRepository>();
+
+            services.AddSignalR()
+                .AddJsonProtocol(options =>
                 {
-                    builder
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials()
-                    .WithOrigins("http://localhost:4200");
-                }));
+                    options.PayloadSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                });
+
+            services.AddDbContext<GameStateDbContext>(opt => opt.UseInMemoryDatabase("GameStateDb"));
             services.AddControllers();
-            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,12 +62,11 @@ namespace CahBackend
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors(CorsPolicy);
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseRouting();
-
             app.UseAuthorization();
-
-            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

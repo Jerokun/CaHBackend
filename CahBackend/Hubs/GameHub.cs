@@ -1,5 +1,4 @@
-﻿using GameLogic.Models.Game;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;

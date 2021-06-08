@@ -1,4 +1,4 @@
-﻿namespace GameLogic.Models.Lobby
+﻿namespace CahBackend.Lobby
 {
     using System;
 

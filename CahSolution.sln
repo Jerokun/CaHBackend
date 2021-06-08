@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CahBackend", "CahBackend\CahBackend.csproj", "{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4C75C0CB-E282-439F-A68F-A3508CF3A052} = {4C75C0CB-E282-439F-A68F-A3508CF3A052}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{BE539B54-39FA-48C4-B68E-20167680FDCF}"
 EndProject
@@ -14,6 +17,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9CB0DFB7-35C5-4A56-9D4F-0CDFF728EB2B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CahBackend.Controllers.Session.Tests", "CahBackend.Controllers.Session.Tests\CahBackend.Controllers.Session.Tests.csproj", "{1A0E704E-6744-4697-9AFE-06BC737C7AE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lobby", "Lobby\Lobby.csproj", "{4C75C0CB-E282-439F-A68F-A3508CF3A052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +42,10 @@ Global
 		{1A0E704E-6744-4697-9AFE-06BC737C7AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A0E704E-6744-4697-9AFE-06BC737C7AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A0E704E-6744-4697-9AFE-06BC737C7AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C75C0CB-E282-439F-A68F-A3508CF3A052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C75C0CB-E282-439F-A68F-A3508CF3A052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C75C0CB-E282-439F-A68F-A3508CF3A052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C75C0CB-E282-439F-A68F-A3508CF3A052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +55,7 @@ Global
 		{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7} = {BE539B54-39FA-48C4-B68E-20167680FDCF}
 		{6FC052F9-94D2-43D6-91E0-BDABDF7E1824} = {9CB0DFB7-35C5-4A56-9D4F-0CDFF728EB2B}
 		{1A0E704E-6744-4697-9AFE-06BC737C7AE9} = {9CB0DFB7-35C5-4A56-9D4F-0CDFF728EB2B}
+		{4C75C0CB-E282-439F-A68F-A3508CF3A052} = {BE539B54-39FA-48C4-B68E-20167680FDCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5456445F-2479-4874-B9FA-865A3D39F5E9}

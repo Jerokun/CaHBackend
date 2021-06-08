@@ -1,4 +1,4 @@
-﻿using GameLogic.Models.Lobby;
+﻿using CahBackend.Lobby;
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 

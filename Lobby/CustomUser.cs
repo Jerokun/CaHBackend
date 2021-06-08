@@ -1,13 +1,14 @@
-﻿using System;
-
-namespace GameLogic.Models.Lobby
+﻿namespace CahBackend.Lobby
 {
-    public abstract class User
+    using System;
+
+    public abstract class CustomUser
     {
         public Guid Id { get; set; }
+
         public string Name { get; set; }
 
-        public User()
+        public CustomUser()
         {
             Id = new Guid();
         }

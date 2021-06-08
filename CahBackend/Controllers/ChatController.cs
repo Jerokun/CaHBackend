@@ -1,5 +1,5 @@
 ﻿using CahBackend.Hubs;
-using GameLogic.Models.Lobby;
+using CahBackend.Lobby;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
